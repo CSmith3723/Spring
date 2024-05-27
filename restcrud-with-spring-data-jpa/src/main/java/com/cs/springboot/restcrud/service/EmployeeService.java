@@ -3,7 +3,6 @@ package com.cs.springboot.restcrud.service;
 import com.cs.springboot.restcrud.entity.Employee;
 
 import java.util.List;
-import java.util.Optional;
 
 
 //---THIS IS THE APPLICATION LAYER---//
