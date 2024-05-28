@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleafe Demo</title>
+</head>
+<link rel="stylesheet" th:href="@{/css/static/demo.css}"/>
+<body>
+
+<p th:text=" 'Time on the server is ' + ${theDate}" class="funny"></p>
+
+</body>
+</html>
