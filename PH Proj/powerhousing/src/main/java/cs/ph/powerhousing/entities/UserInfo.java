@@ -12,57 +12,38 @@ import jakarta.validation.constraints.*;
 @Getter
 @Setter
 @Entity
-@Table(name="user_credentials")
+@Table(name="users")
 public class UserInfo {
 
 
     @Id
     @Column(name="username")
-    @NotNull(message = "is required")
-    @Size(min=1, message = "is required")
-    @Pattern(regexp = "^[a-zA-Z0-9_.]{8,20}$")
     private String username;
 
 
-    @Column(name="user_password")
-    @NotNull(message = "is required")
-    @Size(min=1, message = "is required")
+    @Column(name="password")
     private String userPassword;
 
-    @Column(name="email")
-    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
-    private String email;
+    public UserInfo(){}
 
-
-    public @NotNull(message = "is required") @Size(min = 1, message = "is required") @Pattern(regexp = "^[a-zA-Z0-9_.]{8,20}$") String getUsername() {
-        return username;
-    }
-
-    public void setUsername(@NotNull(message = "is required") @Size(min = 1, message = "is required") @Pattern(regexp = "^[a-zA-Z0-9_.]{8,20}$") String username) {
+    public UserInfo(String username, String userPassword) {
         this.username = username;
-    }
-
-    public @NotNull(message = "is required") @Size(min = 1, message = "is required") String getPassword() {
-        return userPassword;
-    }
-
-    public void setPassword(@NotNull(message = "is required") @Size(min = 1, message = "is required") String userPassword) {
         this.userPassword = userPassword;
     }
 
-    public @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$") String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(@Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$") String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }

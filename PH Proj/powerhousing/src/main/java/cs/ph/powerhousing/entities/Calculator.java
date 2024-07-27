@@ -11,15 +11,17 @@ import java.util.List;
 @Setter
 public class Calculator {
 
-    private List<String> wageTypes = new ArrayList<>(Arrays.asList("Hourly", "Salaried"));
+    public Calculator(){}
 
+
+
+    private List<String> wageTypes = new ArrayList<>(Arrays.asList("Hourly", "Salaried"));
     private String wageType;
     private double wageInput;
     private double hoursWorked;
     private double monthlyExpenses;
     private double grossMonthlyWages;
     private double netMonthlyWages;
-
 
 
 }
