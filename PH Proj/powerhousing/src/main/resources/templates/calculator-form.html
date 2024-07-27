@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PowerHousing Calculator</title>
+</head>
+
+<body>
+<h3>Calculator</h3>
+<a th:href="@{/home}">
+    <button>Home</button>
+</a>
+
+<br>
+<br>
+
+<form  th:object="${calculator}" th:action="@{/calculateInput}" method="POST">
+
+
+    Wage type: <select th:field="*{wageTypes}">
+        <option th:each="tempWageType : ${calculator.wageTypes}"
+                th:value="${tempWageType}" th:text="${tempWageType}"></option>
+    </select>
+    <br>
+
+    Wages:<input type="text" th:field="*{wageInput}" />
+        <br>
+        <br>
+    Hours Worked: <input type="text" th:field="*{hoursWorked}" />
+        <br>
+        <br>
+    Monthly Expenses: <input type="text" th:field="*{monthlyExpenses}" />
+        <br>
+        <br>
+
+    Housing Type:  <select>
+    <option th:value="House" th:text="House"></option>
+    <option th:value="'One Bedroom Apartment'" th:text="'One Bedroom Apartment'"></option>
+    <option th:value="'Two Bedroom Apartment'" th:text="'Two Bedroom Apartment'"></option>
+        </select>
+
+    <br>
+    <br>
+   Neighborhood: <select th:field="${neighborhoods}">
+    <option th:each="neighborhood : ${neighborhoods}" th:value="${neighborhood}" th:text="${neighborhood}"></option>
+</select>
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+
+</body>
+</html>
