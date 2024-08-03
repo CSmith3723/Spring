@@ -1,17 +1,41 @@
 package cs.ph.powerhousing.services;
 
+import cs.ph.powerhousing.dao.HousingRepository;
 import cs.ph.powerhousing.entities.Calculator;
 import cs.ph.powerhousing.entities.Housing;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-public interface HousingService {
+@Getter
+@Setter
+@Service
+public class HousingService{
 
-    List<String> neighborhoodsList();
+    private HousingRepository housingRepository;
 
-    List<Housing> findAll();
+    @Autowired
+    public HousingService(HousingRepository thehousingRepository){
+        housingRepository=thehousingRepository;
+    }
 
-    double calculateGrossWages(Calculator calculator);
 
-    public double calculateNetWages(Calculator calculator);
+    public List<String> neighborhoodsList() {
+        List<Housing> neighborhoodInfo = housingRepository.findAll();
+
+        return neighborhoodInfo.stream()
+                .map(Housing::getNeighborhood)
+                .collect(Collectors.toList());
+    }
+
+    public List<Housing> findAll() {
+        return housingRepository.findAll();
+    }
+
+
+
 }

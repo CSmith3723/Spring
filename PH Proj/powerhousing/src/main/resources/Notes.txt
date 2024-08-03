@@ -1,0 +1,10 @@
+New user creation recognizes existing usernames and saves new ones along with passwords.
+
+Need to do the following:
+
+1. Set up BCrypt
+2. Event Listener for dropdown
+3. Solve Login
+
+
+

@@ -9,6 +9,17 @@
     background: linear-gradient(to right, #24b8ee, #3677d8, #363cdd, #ad45b4);
 }
 
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #24b8ee;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, #24b8ee, #3677d8, #363cdd, #ad45b4);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #24b8ee, #3677d8, #363cdd, #ad45b4);
+}
+
 @media (min-width: 768px) {
     .gradient-form {
         height: 100vh !important;
@@ -23,4 +34,18 @@
     .basic-background{
         background: #24b8ee;
     }
+}
+
+h3{
+    text-shadow: 1px 0 3px #000000;
+}
+
+.map {
+    height: 80%; /* Adjust height as needed */
+    width: 100%;
+}
+
+
+p{
+    text-shadow: 1px 0 3px #000000;
 }

@@ -6,14 +6,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import jakarta.validation.constraints.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
 
 
 @Getter
 @Setter
 @Entity
 @Table(name="users")
-public class UserInfo {
+public class UserInfo implements UserDetails {
 
 
     @Id
@@ -24,26 +29,49 @@ public class UserInfo {
     @Column(name="password")
     private String userPassword;
 
+    private String role;
+
     public UserInfo(){}
 
-    public UserInfo(String username, String userPassword) {
+    public UserInfo(String username, String userPassword, String role) {
         this.username = username;
         this.userPassword = userPassword;
+        this.role = role;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singletonList(new SimpleGrantedAuthority("USER"));
+    }
+
+    @Override
+    public String getPassword() {
+        return userPassword;
+    }
+
+    @Override
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
     }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
 }
