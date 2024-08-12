@@ -2,9 +2,20 @@ New user creation recognizes existing usernames and saves new ones along with pa
 
 Need to do the following:
 
-1. Set up BCrypt
-2. Event Listener for dropdown
-3. Solve Login
+1. Build html for "forbidden" 403 status
 
 
 
+
+
+
+
+
+
+Common operations that can throw exceptions include:
+
+    File I/O Operations: Reading from or writing to files.
+    Database Access: Executing SQL queries or interacting with a database.
+    Network Communications: Making network requests or connecting to other services.
+    Parsing and Conversion: Converting data types or parsing strings.
+    External Library Calls: Using third-party libraries or APIs.

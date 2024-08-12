@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,12 +21,12 @@ import java.util.Collections;
 @Table(name="users")
 public class UserInfo implements UserDetails {
 
-
     @Id
+    @NotNull
     @Column(name="username")
     private String username;
 
-
+    @NotNull
     @Column(name="password")
     private String userPassword;
 
@@ -73,5 +74,6 @@ public class UserInfo implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 
 }

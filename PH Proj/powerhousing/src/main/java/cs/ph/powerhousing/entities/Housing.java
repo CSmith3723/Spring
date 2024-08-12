@@ -1,10 +1,7 @@
 package cs.ph.powerhousing.entities;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,14 +18,18 @@ public class Housing {
     private String neighborhood;
 
     @Column(name="median_home_price")
-    private double medianHomePrice;
+    private int medianHomePrice;
 
     @Column(name="median_onebr_apt_price")
-    private double medianOneBedApt;
+    private int medianOneBedApt;
 
     @Column(name="median_twobr_apt_price")
-    private double medianTwoBedApt;
+    private int medianTwoBedApt;
 
+    @Transient
+    private int currentPriceByHousingType;
 
+    @Transient
+    private String housingType;
 
 }

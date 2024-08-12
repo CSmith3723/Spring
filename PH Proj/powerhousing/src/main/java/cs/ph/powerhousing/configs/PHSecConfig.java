@@ -36,10 +36,10 @@ public class PHSecConfig{
     }
 
 
-    @Bean
-    WebSecurityCustomizer configureWebSecurity() {
-        return (web) -> web.ignoring().requestMatchers("/css/**");
-    }
+//    @Bean
+//    WebSecurityCustomizer configureWebSecurity() {
+//        return (web) -> web.ignoring().requestMatchers("/resources/**");
+//    }
 
     @Bean
     public AuthenticationProvider authenticationProvider(){
@@ -55,14 +55,10 @@ public class PHSecConfig{
        return httpSecurity
                 .csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request-> request
-                        .requestMatchers("/").permitAll()
-                        .requestMatchers("/home").permitAll()
-                        .requestMatchers("/userLogin").permitAll()
-                        .requestMatchers("/calculator").permitAll()
-                        .requestMatchers("/processCalculation").permitAll()
-                        .requestMatchers("/createUser").permitAll()
-                        .requestMatchers("processRegistration").permitAll()
-                        .requestMatchers("/api/**").hasRole("ADMIN")
+                        .requestMatchers("/","/home","/userLogin","/calculator","/processCalculation",
+                                "/createUser","/processRegistration", "/profiles", "/saved", "/saveProfile","/exportToPDF",
+                                "/showMap", "/reports/**", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/api/**","/maps/**",  "/searchProfile").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(httpSecurityFormLoginConfigurer -> httpSecurityFormLoginConfigurer

@@ -5,71 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4248dd64-dc84-4fe3-80fd-467114e79e9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/AuthSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/GoogleMapsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/PHSecConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/ContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/EndpointController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/RestRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powerhousing/src/test/java/cs/ph/powerhousing/AuthHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/RestControllers/MapAPIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/RestControllers/ProfilesRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/RestControllers/UserRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/MapViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/NewUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/ProfileRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/SavedProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/ProfileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/reports/saved_profiles_report.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/static/js/googleMapEvent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/saved-profiles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/search-profiles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerhousing/src/test/java/cs/ph/powerhousing/services/ProfileServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../00-spring-boot-rest-security-employee-starter-code/src/main/java/com/luv2code/springboot/cruddemo/security/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../00-spring-boot-rest-security-employee-starter-code/src/main/java/com/luv2code/springboot/cruddemo/security/DemoSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/java/com/cs/thymeleafdemo/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/java/com/cs/thymeleafdemo/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/resources/templates/list-employees.html" beforeDir="false" afterPath="$PROJECT_DIR$/../07-spring-boot-spring-mvc-crud/00-spring-boot-spring-mvc-crud-starter-code/src/main/resources/templates/list-employees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PH Proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PH Proj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/static/js/mapCapture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/UI/tsconfig.spec.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/PowerhousingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/PowerhousingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/CalculatorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/HousingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/MapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/MapDisplayController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/RegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/UserResository.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/AuthSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/AuthSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/PHSecConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/configs/PHSecConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/ContentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/EndpointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/RestControllers/NeighborhoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/MapController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/controllers/RestRegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/HousingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/HousingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/Housing.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/Housing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/entities/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/CalculatorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/HousingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/HousingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/HousingServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/MapService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/services/UserServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/user/WebUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/java/cs/ph/powerhousing/user/WebUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/Notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/static/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/static/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/static/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/static/css/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/calculator-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/calculator-confirmation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/calculator-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/calculator-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/create-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/create-user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/login-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/login-confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/login-confirmation.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/login-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/login-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerhousing/src/main/resources/templates/new-user-confirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerhousing/src/test/java/cs/ph/powerhousing/PowerhousingApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/controller/DemoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/security/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demosecurity/src/main/java/cs/springboot/demosecurity/security/DemoSecurityConfig.java" afterDir="false" />
@@ -131,9 +145,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="spring-beans.schema" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -152,6 +169,9 @@
     &quot;accountId&quot;: &quot;92a30161-c174-465a-95fe-e88488dc28a8&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -170,6 +190,13 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.AuthHandlerTest.testAuthenticationHandler.executor": "Run",
+    "JUnit.CalculatorServiceTest.calculateGrossWages.executor": "Run",
+    "JUnit.ContentControllerTest.processForm.executor": "Run",
+    "JUnit.HomeControllerTest.processForm.executor": "Run",
+    "JUnit.HousingRepositoryTest.findOneBedPriceByNeighborhood.executor": "Run",
+    "JUnit.ProfileServiceTest.deleteSavedProfileById.executor": "Run",
+    "JUnit.ProfileServiceTest.findAllProfiles.executor": "Run",
+    "JUnit.ProfileServiceTest.findSavedProfileByUsername.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -177,15 +204,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.PowerhousingApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Chris/Desktop/D387",
+    "last_opened_file_path": "C:/Users/Chris/Desktop/powerhousing-capstone",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -200,21 +229,96 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Chris\Desktop\Java Stuff\IntelliJ Projects\Spring\PH Proj\powerhousing\src\main\resources\static\css" />
+      <recent name="C:\Users\Chris\Desktop\Java Stuff\IntelliJ Projects\Spring\PH Proj\powerhousing\src\main\resources\static\js" />
+      <recent name="C:\Users\Chris\Desktop\Java Stuff\IntelliJ Projects\Spring\PH Proj\powerhousing\src\main\resources\static" />
+      <recent name="C:\Users\Chris\Desktop\Java Stuff\IntelliJ Projects\Spring\PH Proj\powerhousing\src\main\resources" />
       <recent name="C:\Users\Chris\Desktop\Java Stuff\IntelliJ Projects\Spring\PH Proj\powerhousing\src\main\resources\templates" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cs.ph.powerhousing.services" />
+      <recent name="cs.ph.powerhousing.controllers" />
+      <recent name="cs.ph.powerhousing.dao" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PowerhousingApplication">
-    <configuration name="AuthHandlerTest.testAuthenticationHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorServiceTest.calculateGrossWages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="powerhousing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cs.ph.powerhousing.*" />
+          <option name="PATTERN" value="cs.ph.powerhousing.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cs.ph.powerhousing" />
-      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.AuthHandlerTest" />
-      <option name="METHOD_NAME" value="testAuthenticationHandler" />
+      <option name="PACKAGE_NAME" value="cs.ph.powerhousing.services" />
+      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.services.CalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateGrossWages" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeControllerTest.processForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="powerhousing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs.ph.powerhousing.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cs.ph.powerhousing.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.controllers.HomeControllerTest" />
+      <option name="METHOD_NAME" value="processForm" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileServiceTest.deleteSavedProfileById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="powerhousing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs.ph.powerhousing.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cs.ph.powerhousing.services" />
+      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.services.ProfileServiceTest" />
+      <option name="METHOD_NAME" value="deleteSavedProfileById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileServiceTest.findAllProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="powerhousing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs.ph.powerhousing.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cs.ph.powerhousing.services" />
+      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.services.ProfileServiceTest" />
+      <option name="METHOD_NAME" value="findAllProfiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileServiceTest.findSavedProfileByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="powerhousing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs.ph.powerhousing.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cs.ph.powerhousing.services" />
+      <option name="MAIN_CLASS_NAME" value="cs.ph.powerhousing.services.ProfileServiceTest" />
+      <option name="METHOD_NAME" value="findSavedProfileByUsername" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -230,7 +334,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthHandlerTest.testAuthenticationHandler" />
+        <item itemvalue="JUnit.HomeControllerTest.processForm" />
+        <item itemvalue="JUnit.ProfileServiceTest.findAllProfiles" />
+        <item itemvalue="JUnit.ProfileServiceTest.deleteSavedProfileById" />
+        <item itemvalue="JUnit.ProfileServiceTest.findSavedProfileByUsername" />
+        <item itemvalue="JUnit.CalculatorServiceTest.calculateGrossWages" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +370,22 @@
       <workItem from="1722433296388" duration="10812000" />
       <workItem from="1722449779846" duration="10412000" />
       <workItem from="1722690316028" duration="13822000" />
-      <workItem from="1722704609290" duration="8814000" />
+      <workItem from="1722704609290" duration="9025000" />
+      <workItem from="1722781121030" duration="164000" />
+      <workItem from="1722781300353" duration="3355000" />
+      <workItem from="1722785809042" duration="2784000" />
+      <workItem from="1722869176115" duration="4104000" />
+      <workItem from="1722949512120" duration="807000" />
+      <workItem from="1722950343571" duration="29471000" />
+      <workItem from="1722982216852" duration="5945000" />
+      <workItem from="1723036271879" duration="30930000" />
+      <workItem from="1723115455271" duration="15208000" />
+      <workItem from="1723132036431" duration="173000" />
+      <workItem from="1723132231043" duration="4254000" />
+      <workItem from="1723155227970" duration="1743000" />
+      <workItem from="1723297792738" duration="14209000" />
+      <workItem from="1723391984419" duration="8275000" />
+      <workItem from="1723465759120" duration="15492000" />
     </task>
     <servers />
   </component>

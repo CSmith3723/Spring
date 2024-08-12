@@ -7,17 +7,53 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
-    <title>PowerHousing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>PowerHousing Login</title>
 
 </head>
 
-<section class="h-100 gradient-form" style="background-color: #24b8ee;">
+<body class="basic-background">
+<section class="h-100 gradient-form basic-background">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/home}">PowerHousing</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" th:href="@{/home}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/calculator}">Calculator</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/saved}">Saved Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/createUser}">Create Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/userLogin}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
-                <div class="card rounded-3 text-white">
+                <div class="card rounded-3 text-white basic-background">
                     <div class="row g-0">
-                        <div class="col-lg-6 gradient-custom-3">
+                        <div class="col-lg-6 gradient-custom-3 rounded">
                             <div class="card-body p-md-5 mx-md-4">
 
 
@@ -25,6 +61,12 @@
                                       method="POST">
 
                                     <h3 class="mb-4 text-center">Login</h3>
+
+                                    <div th:if="${savedProfileAccess}">
+                                        <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+                                            <span th:text="${savedProfileAccess}"></span>
+                                        </div>
+                                    </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <input type="text" th:field="*{username}"
@@ -54,8 +96,11 @@
 
                                 </form>
 
+
+                                <div class="d-flex align-items-center justify-content-center pb-2">
+                                    <span class="mb-0 me-2">Don't have an account? </span>
+                                </div>
                                 <div class="d-flex align-items-center justify-content-center pb-4">
-                                    <span class="mb-0 me-2">Don't have an account?</span>
                                     <a th:href="@{/createUser}">
                                         <button type="button" data-mdb-button-init data-mdb-ripple-init
                                                 class="btn text-black btn-primary btn-block basic-background">Create
@@ -84,6 +129,7 @@
         </div>
     </div>
 </section>
+</body>
 
 
 </html>

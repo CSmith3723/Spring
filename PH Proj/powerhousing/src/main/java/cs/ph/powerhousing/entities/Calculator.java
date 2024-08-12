@@ -13,8 +13,6 @@ public class Calculator {
 
     public Calculator(){}
 
-
-
     private List<String> wageTypes = new ArrayList<>(Arrays.asList("Hourly", "Salaried"));
     private String wageType;
     private double wageInput;

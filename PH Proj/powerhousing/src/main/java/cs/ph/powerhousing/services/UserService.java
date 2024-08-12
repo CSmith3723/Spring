@@ -2,6 +2,7 @@ package cs.ph.powerhousing.services;
 
 
 import cs.ph.powerhousing.dao.UserRepository;
+import cs.ph.powerhousing.dto.UserDTO;
 import cs.ph.powerhousing.entities.UserInfo;
 import cs.ph.powerhousing.user.WebUser;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,27 +22,31 @@ public class UserService {
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
-
     }
 
+    public List<UserDTO> findAllUsers() {
+        List<UserInfo> userList = userRepository.findAll();
 
-    public List<String> findAllUsernames() {
-        List<UserInfo> usernameList = userRepository.findAll();
-
-        return usernameList.stream().map(UserInfo::getUsername)
+        return userList.stream().map(user -> new UserDTO(user.getUsername(), user.getRole()))
                 .collect(Collectors.toList());
     }
 
-    public UserInfo register(UserInfo userInfo){
-        return userRepository.save(userInfo);
-    }
 
-    public void save(WebUser webUser) {
+    public void register(WebUser webUser){
         System.out.println("Saving user to database.");
         UserInfo userInfo = new UserInfo();
 
         userInfo.setUsername(webUser.getUsername());
         userInfo.setUserPassword(passwordEncoder.encode(webUser.getPassword()));
+        userInfo.setRole("USER");
+        userRepository.save(userInfo);
+    }
+
+
+    public void save(UserInfo userInfo) {
+        userInfo.setUsername(userInfo.getUsername());
+        userInfo.setUserPassword(userInfo.getUserPassword());
+        userInfo.setRole(userInfo.getRole());
         userRepository.save(userInfo);
     }
 
@@ -49,6 +54,10 @@ public class UserService {
     public UserInfo findByUsername(String username) {
         return userRepository.findByUsername(username);
 
+    }
+
+    public void deleteUser(String username){
+        userRepository.deleteById(username);
     }
 
 

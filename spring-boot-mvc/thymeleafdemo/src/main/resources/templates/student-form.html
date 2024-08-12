@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
 </head>
+
 <body>
-$END$
+<h3>Student Registration Form</h3>
+
+
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
+<!--    *{firstName} is shortcut for ${student.firstName}-->
+
+    First Name: <input type="text" th:field="*{firstName}" />
+    <br>
+    <br>
+    Last Name: <input type="text" th:field="*{lastName}" />
+    <br>
+    <br>
+
+    Country: <select th:field="*{country}">
+        <!-- Looping over the values in the List of countries and populating the dropdown-->
+            <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
+    </select>
+
+    <br>
+    <br>
+    Favorite Programming Language:
+        <input type="radio" th:field="*{favoriteLanguage}" th:each="tempLang : ${languages}" th:value="${tempLang}"
+                th:text="${tempLang}" />
+
+<!--               th:value="Java">Java</input>-->
+<!--        <input type="radio" th:field="*{favoriteLanguage}" th:value="Go">Go</input>-->
+<!--        <input type="radio" th:field="*{favoriteLanguage}" th:value="Python">Python</input>-->
+    <br>
+    <br>
+    Favorite System: <input type="checkbox" th:field="*{favoriteSystems}" th:each="tempSystem : ${systems}" th:value="${tempSystem}"
+                            th:text="${tempSystem}" />
+    <br>
+    <br>
+
+
+    <input type="submit" value="Submit" />
+
+</form>
 </body>
 </html>

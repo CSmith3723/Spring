@@ -1,11 +1,9 @@
 package cs.ph.powerhousing.services;
 
 import cs.ph.powerhousing.dao.HousingRepository;
-import cs.ph.powerhousing.entities.Calculator;
 import cs.ph.powerhousing.entities.Housing;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,13 +14,11 @@ import java.util.stream.Collectors;
 @Service
 public class HousingService{
 
-    private HousingRepository housingRepository;
+    HousingRepository housingRepository;
 
-    @Autowired
-    public HousingService(HousingRepository thehousingRepository){
-        housingRepository=thehousingRepository;
+    public HousingService(HousingRepository housingRepository){
+        this.housingRepository = housingRepository;
     }
-
 
     public List<String> neighborhoodsList() {
         List<Housing> neighborhoodInfo = housingRepository.findAll();
@@ -36,6 +32,65 @@ public class HousingService{
         return housingRepository.findAll();
     }
 
+    public List<Integer> oneBRAptPrices(){
+        List<Housing> oneBedAptPrices = housingRepository.findAll();
+
+        return oneBedAptPrices.stream()
+                .map(Housing::getMedianOneBedApt)
+                .collect(Collectors.toList());
+    }
+
+    public List<Integer> twoBRAptPrices(){
+        List<Housing> twoBedAptPrices = housingRepository.findAll();
+
+        return twoBedAptPrices.stream()
+                .map(Housing::getMedianOneBedApt)
+                .collect(Collectors.toList());
+    }
+
+    public List<Integer> housingPrices(){
+        List<Housing> housingPrices = housingRepository.findAll();
+
+        return housingPrices.stream()
+                .map(Housing::getMedianHomePrice)
+                .collect(Collectors.toList());
+    }
+
+
+    public Housing findByNeighborhood(String neighborhood){
+       return housingRepository.findByNeighborhood(neighborhood);
+    }
+
+    public int oneBedPriceByNeighborhood(String neighborhood) {
+       return housingRepository.findByNeighborhood(neighborhood).getMedianOneBedApt();
+    }
+
+    public int twoBedPriceByNeighborhood(String neighborhood){
+        return housingRepository.findByNeighborhood(neighborhood).getMedianTwoBedApt();
+    }
+
+
+    public int homePricebyNeighborhood(String neighborhood){
+        return housingRepository.findByNeighborhood(neighborhood).getMedianHomePrice();
+    }
+
+
+    public int priceByHousingType(String neighborhood, String housingType){
+
+        if(housingType.equals("One Bedroom Apartment")){
+            return oneBedPriceByNeighborhood(neighborhood);
+        }
+        if(housingType.equals("Two Bedroom Apartment")){
+            return twoBedPriceByNeighborhood(neighborhood);
+        }
+        if(housingType.equals("House")){
+            return homePricebyNeighborhood(neighborhood);
+        }
+        else{
+            return -1;
+        }
+
+    }
 
 
 }
