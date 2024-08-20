@@ -35,11 +35,17 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>
@@ -81,7 +87,7 @@
                                 </div>
 
                                 <div data-mdb-input-init class="form-outline mb-4">
-                                    <label class="form-label">Gross Monthly Wages(without taxes): </label>
+                                    <label class="form-label">Gross Monthly Wages (before taxes): </label>
                                     <span id="grossMonthlyWages"
                                           th:text="${#numbers.formatDecimal(calculator.grossMonthlyWages, 1, 'COMMA', 2, 'POINT')}"></span>
                                 </div>
@@ -93,7 +99,7 @@
                                 </div>
 
                                 <div data-mdb-input-init class="form-outline mb-4">
-                                    <label class="form-label">Net Monthly Wages(without taxes): </label>
+                                    <label class="form-label">Net Monthly Wages (before taxes): </label>
                                     <span id="netMonthlyWages"
                                           th:text="${#numbers.formatDecimal(calculator.netMonthlyWages, 1, 'COMMA', 2, 'POINT')}"></span>
                                 </div>

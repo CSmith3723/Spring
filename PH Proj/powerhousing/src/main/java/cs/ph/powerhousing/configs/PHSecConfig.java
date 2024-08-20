@@ -57,8 +57,8 @@ public class PHSecConfig{
                 .authorizeHttpRequests(request-> request
                         .requestMatchers("/","/home","/userLogin","/calculator","/processCalculation",
                                 "/createUser","/processRegistration", "/profiles", "/saved", "/saveProfile","/exportToPDF",
-                                "/showMap", "/reports/**", "/css/**", "/js/**").permitAll()
-                        .requestMatchers("/api/**","/maps/**",  "/searchProfile").hasRole("ADMIN")
+                                "/showMap", "/reports/**", "/about", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/api/**","/maps/**", "/report",  "/searchProfile").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(httpSecurityFormLoginConfigurer -> httpSecurityFormLoginConfigurer

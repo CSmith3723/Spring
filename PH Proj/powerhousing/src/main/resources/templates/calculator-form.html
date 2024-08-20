@@ -36,11 +36,17 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>
@@ -83,7 +89,7 @@
                                                name="hoursWorked" class="form-control"/>
                                     </div>
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <label class="form-label">Monthly Expenses(without rent): </label>
+                                        <label class="form-label">Monthly Expenses (before rent): </label>
                                         <input type="number" id="expenses" step=".01" th:field="*{monthlyExpenses}"
                                                name="monthlyExpenses" class="form-control"/>
                                     </div>

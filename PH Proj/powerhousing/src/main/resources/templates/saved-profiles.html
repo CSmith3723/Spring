@@ -14,8 +14,9 @@
 
 </head>
 
-<body class="basic-background"><section class="h-100 gradient-form basic-background">
-    <nav class="navbar navbar-expand-lg ">
+<body class="basic-background">
+<section class="h-100 gradient-form basic-background">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" th:href="@{/home}">PowerHousing</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,11 +34,17 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>
@@ -47,23 +54,47 @@
     </nav>
 
 
-    <div class="container py-5 h-100 basic-background">
-        <div class="text-center"><h3 class="text-center text-white">Report</h3>
-            <div class="text-center m-3">
-            <form action="#" th:action="@{/exportToPDF}" method="post">
-                <button type="submit"
-                        class="btn btn-primary basic-background text-black shadow-sm">Export to PDF
-                </button>
-            </form>
+    <div class="container py-5 basic-background">
+
+        <h3 class="text-center text-white">Saved Profiles</h3>
+
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center basic-background">
+                <div class="col-xl-10 basic-background">
+                    <div class="card rounded-3 text-white gradient-custom-down">
+                        <div class="row g-0">
+                            <div class="card-body p-md-5 mx-md-4">
+                                <h5 class="text-center text-white">Profiles</h5>
+                                <table class="table table-info table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Neighborhood</th>
+                                        <th>Housing Type</th>
+                                        <th>Price</th>
+                                        <th>Gross Wages</th>
+                                        <th>Expenses</th>
+                                        <th>Net Wages</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="userProfile : ${userProfiles}">
+                                        <td th:text="${userProfile.username}">Username</td>
+                                        <td th:text="${userProfile.neighborhood}">Neighborhood</td>
+                                        <td th:text="${userProfile.housingType}">Housing Type</td>
+                                        <td th:text="${userProfile.housingPrice}">Price</td>
+                                        <td th:text="${userProfile.grossMonthlyWages}">Gross Wages</td>
+                                        <td th:text="${userProfile.monthlyExpenses}">Expenses</td>
+                                        <td th:text="${userProfile.netMonthlyWages}">Net Wages</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-        <div th:if="${reportError}"
-             class="d-flex align-items-center justify-content-center pb-4">
-            <i class="alert alert-danger">Report could not be generated.</i>
-        </div>
-        <div class="text-black" th:utext="${reportHtml}"></div>
     </div>
 </section>
 </body>

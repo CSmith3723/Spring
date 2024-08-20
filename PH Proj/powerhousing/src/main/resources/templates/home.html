@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,11 +33,17 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
+                    </li>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>

@@ -3,8 +3,6 @@ package cs.ph.powerhousing.controllers;
 import cs.ph.powerhousing.entities.SavedProfile;
 import cs.ph.powerhousing.services.ProfileService;
 import org.springframework.data.repository.query.Param;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

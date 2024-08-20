@@ -30,7 +30,7 @@ public class UserRestController {
         return new UserDTO(userInfo.getUsername(), userInfo.getRole());
     }
 
-    @PutMapping("{username}")
+    @PutMapping("/{username}")
     public UserDTO updateUser(@RequestBody UserInfo userInfo, @PathVariable String username) {
         UserInfo updateUser = userService.findByUsername(username);
         if (updateUser.getUsername().equals(userInfo.getUsername())) {
@@ -42,12 +42,12 @@ public class UserRestController {
         return new UserDTO(userInfo.getUsername(), userInfo.getRole());
     }
 
-    @GetMapping()
+    @GetMapping("/allUsers")
     public List<UserDTO> findAllUsers() {
         return userService.findAllUsers();
     }
 
-    @GetMapping("{username}")
+    @GetMapping("/{username}")
     public UserDTO findByUsername(@PathVariable String username) {
         UserInfo user = userService.findByUsername(username);
         if (user != null) {
@@ -67,7 +67,7 @@ public class UserRestController {
         return "Anonymous";
     }
 
-    @DeleteMapping("{username}")
+    @DeleteMapping("/{username}")
     public void deleteUser(@PathVariable String username) {
         userService.deleteUser(username);
     }

@@ -36,6 +36,9 @@
                     <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
                     </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item">

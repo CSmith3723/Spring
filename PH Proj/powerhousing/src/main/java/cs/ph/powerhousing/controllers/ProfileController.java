@@ -1,5 +1,6 @@
 package cs.ph.powerhousing.controllers;
 
+import cs.ph.powerhousing.entities.SavedProfile;
 import cs.ph.powerhousing.services.ProfileService;
 import cs.ph.powerhousing.services.ReportService;
 import cs.ph.powerhousing.services.UserService;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class ProfileController {
@@ -24,19 +27,26 @@ public class ProfileController {
         this.reportService = reportService;
     }
 
-
-    @GetMapping("/saved")
+    @GetMapping("/report")
     public String viewReport(Model theModel){
-
-
         try{
             String reportHtml = reportService.generateHTMLReport();
             theModel.addAttribute("reportHtml", reportHtml);
-            return "saved-profiles";
+            return "profiles-report";
         }catch (Exception e){
             theModel.addAttribute("reportError");
-            return "saved-profiles";
+            return "profiles-report";
         }
+    }
+
+
+    @GetMapping("/saved")
+    public String viewSaved(Model theModel){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+        List<SavedProfile> userProfiles = profileService.findAllByUsername(username);
+        theModel.addAttribute("userProfiles", userProfiles);
+        return "saved-profiles";
     }
 
     @PostMapping("/exportToPDF")

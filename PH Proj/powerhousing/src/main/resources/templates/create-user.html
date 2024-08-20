@@ -33,11 +33,17 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>
@@ -111,6 +117,7 @@
 
                         <div class="col-lg-6 align-items-center gradient-custom-2">
                             <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <br>
 
                                 <h3 class="mb-4 text-center">User Account</h3>
                                 <p class="medium mb-0 text-left">

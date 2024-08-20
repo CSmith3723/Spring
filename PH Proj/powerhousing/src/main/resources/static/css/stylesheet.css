@@ -4,6 +4,17 @@
 }
 
 
+.gradient-custom-down {
+    /* fallback for old browsers */
+    background: #24b8ee;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top, #24b8ee, #3677d8, #363cdd, #4a2cde);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #24b8ee, #3677d8, #363cdd, #4a2cde);
+}
+
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #24b8ee;
@@ -55,6 +66,9 @@ h3{
 h4{
     text-shadow: 1px 0 3px #000000;
 }
+h5{
+    text-shadow: 1px 0 3px #000000;
+}
 
 p {
     font-size: 18px;
@@ -64,6 +78,7 @@ li {
     font-size: 20px;
 
 }
+
 label{
     font-size: 18px;
 }
