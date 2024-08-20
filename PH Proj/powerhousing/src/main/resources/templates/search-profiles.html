@@ -38,11 +38,14 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/createUser}">Create Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
                         <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/userLogin}">Login</a>
                     </li>
@@ -54,7 +57,7 @@
 
     <div class="container py-5 basic-background">
 
-        <h3 class="text-center text-white">Saved Profiles</h3>
+        <h3 class="text-center text-white">Saved Profile Search</h3>
 
         <form th:action="@{/searchProfile}">
             <div class="text-center"><span>Filter:</span> <input type="text" name="keyword" id="keyword" size="50"
@@ -70,10 +73,10 @@
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-xl-10">
-                    <div class="card rounded-3 text-white basic-background-2">
+                    <div class="card rounded-3 text-white gradient-custom-down">
                         <div class="row g-0">
                             <div class="card-body p-md-5 mx-md-4">
-                                <h4 class="text-center text-white">Profiles</h4>
+                                <h5 class="text-center text-white">Search Results</h5>
                                 <table class="table table-info table-bordered">
                                     <thead>
                                     <tr>
